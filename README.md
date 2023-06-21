@@ -1,93 +1,139 @@
+Apologies for the confusion. Here's the revised version with each command enclosed in a code block using the `bash` syntax:
+
+```markdown
 # WordPress WP-CLI Commands
 
 ## General Commands
 
 ### Core Management
-- `wp core download` - Download WordPress core files.
-- `wp core install --url=example.com --title="My Site" --admin_user=admin --admin_password=pass123 --admin_email=admin@example.com` - Install WordPress using the provided configuration.
-- `wp core version` - Check the installed WordPress version.
-- `wp core update` - Update WordPress to the latest version.
+
+```bash
+wp core download
+wp core install --url=example.com --title="My Site" --admin_user=admin --admin_password=pass123 --admin_email=admin@example.com
+wp core version
+wp core update
+```
 
 ### Plugin Management
-- `wp plugin list` - List all installed plugins.
-- `wp plugin install hello-dolly` - Install the Hello Dolly plugin.
-- `wp plugin activate hello-dolly` - Activate the Hello Dolly plugin.
-- `wp plugin deactivate hello-dolly` - Deactivate the Hello Dolly plugin.
-- `wp plugin delete hello-dolly` - Delete the Hello Dolly plugin.
+
+```bash
+wp plugin list
+wp plugin install hello-dolly
+wp plugin activate hello-dolly
+wp plugin deactivate hello-dolly
+wp plugin delete hello-dolly
+```
 
 ### Theme Management
-- `wp theme list` - List all installed themes.
-- `wp theme install twentysixteen` - Install the Twenty Sixteen theme.
-- `wp theme activate twentysixteen` - Activate the Twenty Sixteen theme.
-- `wp theme delete twentysixteen` - Delete the Twenty Sixteen theme.
+
+```bash
+wp theme list
+wp theme install twentysixteen
+wp theme activate twentysixteen
+wp theme delete twentysixteen
+```
 
 ### Post Management
-- `wp post list` - List all posts.
-- `wp post create --post_type=post --post_title="My New Post" --post_status=publish` - Create a new post.
-- `wp post update 123 --post_title="Updated Post Title"` - Update an existing post with ID 123.
-- `wp post delete 123` - Delete the post with ID 123.
+
+```bash
+wp post list
+wp post create --post_type=post --post_title="My New Post" --post_status=publish
+wp post update 123 --post_title="Updated Post Title"
+wp post delete 123
+```
 
 ### User Management
-- `wp user list` - List all users.
-- `wp user create john john@example.com --role=author --user_pass=pass123` - Create a new user named John.
-- `wp user delete 456` - Delete the user with ID 456.
+
+```bash
+wp user list
+wp user create john john@example.com --role=author --user_pass=pass123
+wp user delete 456
+```
 
 ### Option Management
-- `wp option get blogname` - Get the value of the "blogname" option.
-- `wp option update blogname "My Site"` - Update the value of the "blogname" option.
+
+```bash
+wp option get blogname
+wp option update blogname "My Site"
+```
 
 ## Database Commands
 
-- `wp db export --add-drop-table backup.sql` - Export the WordPress database.
-- `wp db import backup.sql` - Import a database backup file.
-- `wp db search "example"` - Search for a string in the database.
-- `wp db optimize` - Optimize the WordPress database.
-- `wp db repair` - Repair the WordPress database.
+```bash
+wp db export --add-drop-table backup.sql
+wp db import backup.sql
+wp db search "example"
+wp db optimize
+wp db repair
+```
 
 ## Multisite Commands
 
-- `wp site list` - List all sites in a multisite network.
-- `wp site create --slug=subsite --title="Subsite" --email=admin@example.com` - Create a new subsite in a multisite network.
-- `wp site delete 2` - Delete a subsite from a multisite network.
-- `wp site switch 2` - Switch to a subsite in a multisite network.
+```bash
+wp site list
+wp site create --slug=subsite --title="Subsite" --email=admin@example.com
+wp site delete 2
+wp site switch 2
+```
 
 ## Additional Commands
 
 ### Cache Management
-- `wp cache flush` - Flush the WordPress object cache.
+
+```bash
+wp cache flush
+```
 
 ### Rewrite Management
-- `wp rewrite flush` - Flush the rewrite rules.
+
+```bash
+wp rewrite flush
+```
 
 ### Transient Management
-- `wp transient delete transients_example` - Delete a transient.
+
+```bash
+wp transient delete transients_example
+```
 
 ### Menu Management
-- `wp menu create "Main Menu"` - Create a new menu.
-- `wp menu list` - List all menus.
-- `wp menu location list` - List available menu locations.
-- `wp menu location assign <menu> <location>` - Assign a menu to a specific location.
-- `wp menu item add-custom <menu> "Custom Link" "http://example.com"` - Add a custom link to a menu.
-- `wp menu item add-post <menu> <post-id>` - Add a post to a menu.
-- `wp menu item delete <menu-item-id>` - Delete a menu item.
+
+```bash
+wp menu create "Main Menu"
+wp menu list
+wp menu location list
+wp menu location assign <menu> <location>
+wp menu item add-custom <menu> "Custom Link" "http://example.com"
+wp menu item add-post <menu> <post-id>
+wp menu item delete <menu-item-id>
+```
 
 ### Widget Management
-- `wp widget list` - List all available widgets.
-- `wp widget add text sidebar-1 --title="My Widget" --text="This is my widget content"` - Add a text widget.
-- `wp widget delete text-123` - Delete a specific widget by its ID.
+
+```bash
+wp widget list
+wp widget add text sidebar-1 --title="My Widget" --text="This is my widget content"
+wp widget delete text-123
+```
 
 ### Import/Export Commands
-- `wp import example.xml --authors=create` - Import content from an XML file.
-- `wp export --dir=exports --post_type=post --post_status=publish` - Export posts to a directory.
-- `wp search-replace 'http://oldsite.com' 'http://newsite.com' --precise --dry-run` - Perform a search and replace operation on the database.
-- `wp cron event list` - List scheduled cron events.
-- `wp cron event run my_custom_event` - Run a specific custom cron event.
+
+```bash
+wp import example.xml --authors=create
+wp export --dir=exports --post_type=post --post_status=publish
+wp search-replace 'http://oldsite.com' 'http://newsite.com' --precise --dry-run
+wp cron event list
+wp cron event run my_custom_event
+```
 
 ### Language Management
-- `wp language core install es_ES` - Install the language pack for WordPress core.
-- `wp language plugin install my-plugin es_ES` - Install the language pack for a specific plugin.
-- `wp language theme install my-theme es_ES` - Install the language pack for a specific theme.
-- `wp language core update` - Update the language pack for WordPress core.
-- `wp language plugin update my-plugin` - Update the language pack for a specific plugin.
-- `wp language theme update my-theme` - Update the language pack for a specific theme.
 
+```bash
+wp language core install es_ES
+wp language plugin install my-plugin es_ES
+wp language theme install my-theme es_ES
+wp language core update
+wp language plugin update my-plugin
+wp language theme update my-theme
+```
+```
