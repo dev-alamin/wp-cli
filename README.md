@@ -1,6 +1,3 @@
-Apologies for the confusion. Here's the revised version with each command enclosed in a code block using the `bash` syntax:
-
-```markdown
 # WordPress WP-CLI Commands
 
 ## General Commands
